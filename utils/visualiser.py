@@ -7,6 +7,8 @@ Created on Sat Nov  7 14:23:18 2020
 import gym
 import gym_minigrid
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import draw
+import time
 
 
 def visualiseSteps(optimal_sequence):
@@ -16,5 +18,9 @@ def visualiseSteps(optimal_sequence):
     
         env.step(step)
         img = env.render("rgb_array")
-        plt.imshow(img)
-        plt.show()
+        im = plt.imshow(img)
+        plt.pause(0.1)
+        plt.draw()
+        
+        
+        
